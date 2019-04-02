@@ -1,0 +1,63 @@
+body {
+	background-color: #8f0047;
+	width: 100%;
+	
+}
+
+h1 {
+	font-size: 80px;
+	color: #ffffff;
+	top: 50%;
+	left: 50%;
+	white-space: nowrap;
+}
+
+.box {
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 250px;
+	height: 250px;
+	background-color: #8e00ad;
+	transition-duration: 1s;
+}
+
+
+.box:hover {
+    transform: rotate(45deg);
+    border-radius: 150px;
+    background-color:  #4800a2;
+    transition-duration: 3s;
+}
+
+
+.road {
+	width: 100%;
+	border-bottom: 10px dashed black;
+}
+
+.character {
+	width: 102px;
+	height: 148px;
+	background-image: url(../img/walk.png);
+	animation: walk 1s steps(6) infinite,
+	           forward 10s linear infinite;
+}
+
+@keyframes walk {
+    0% {
+        background-position: 612px;
+    }
+
+    100% {
+    	background-position: 0;
+    }
+}
+
+@keyframes forward {
+	0% {
+		transform: translateX(-100px);
+	}
+	100% {
+		transform: translateX(1250px);
+	}
+}
